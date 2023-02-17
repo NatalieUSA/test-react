@@ -1,5 +1,5 @@
 {
-  "name": "repeta_live_m-1-1",
+  "name": "repeta-m1-1-live",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -34,8 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "prop-types": "^15.8.1"
   }
 }
