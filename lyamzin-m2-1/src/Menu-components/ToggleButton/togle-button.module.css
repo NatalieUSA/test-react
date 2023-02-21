@@ -1,6 +1,8 @@
 .btn {
-  display: inline-block;
-  margin-top: 100px;
+  display: flex;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 72px 50px;
   border: 40px dashed lightgrey;
   background-color: lightgrey;
@@ -9,9 +11,14 @@
   color: deeppink;
   text-transform: uppercase;
   cursor: pointer;
-  text-shadow: 3px 7px 6px #f8f6f6;
+  font-size: 12px;
+  box-shadow: 1px 1px 1px deeppink;
 }
-
+.btn:hover {
+  font-size: 15px;
+  color: #f8f6f6;
+  padding: 73px 50px;
+}
 .btn.active {
   background-color: deeppink;
   color: white;

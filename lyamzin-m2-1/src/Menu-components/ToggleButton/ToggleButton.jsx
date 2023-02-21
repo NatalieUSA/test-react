@@ -25,17 +25,20 @@ class ToggleButton extends Component {
     const { active } = this.state;
     // const { handleClick } = this;
     return (
-      <button
-        onClick={this.handleClick}
-        style={
-          ({ backgroundColor: getRandomHexColor() },
-          { borderColor: getRandomHexColor() })
-        }
-        className={active ? `${styles.btn} ${styles.active}` : styles.btn}
-        type={type}
-      >
-        {text}
-      </button>
+      <div>
+        <h3>Menu-components. ToggleButton</h3>
+        <button
+          onClick={this.handleClick}
+          style={
+            ({ backgroundColor: getRandomHexColor() },
+            { borderColor: getRandomHexColor() })
+          }
+          className={active ? `${styles.btn} ${styles.active}` : styles.btn}
+          type={type}
+        >
+          {text}
+        </button>
+      </div>
     );
   }
 }

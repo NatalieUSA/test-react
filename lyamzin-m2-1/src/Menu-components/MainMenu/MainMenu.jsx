@@ -26,19 +26,24 @@ class MainMenu extends Component {
     const { handleClick } = this;
 
     const elements = items.map(({ id, text, link }, index) => (
-      <li key={id}>
-        <a
-          onClick={() => handleClick(index)}
-          className={
-            activeIndex === index
-              ? `${styles.link} ${styles.active}`
-              : styles.link
-          }
-          href={link}
-        >
-          {text}
-        </a>
-      </li>
+      <section>
+        {" "}
+        <div>
+          <li key={id}>
+            <a
+              onClick={() => handleClick(index)}
+              className={
+                activeIndex === index
+                  ? `${styles.link} ${styles.active}`
+                  : styles.link
+              }
+              href={link}
+            >
+              {text}
+            </a>
+          </li>
+        </div>
+      </section>
     ));
     return <ul className={styles.menu}>{elements}</ul>;
   }
