@@ -10,11 +10,32 @@ class MainMenu extends Component {
   static defaultProps = {
     items: [],
   };
+
+  state = {
+    activeIndex: 0,
+  };
+
+  handleClick = (idx) => {
+    console.log(idx);
+    this.setState({ activeIndex: idx });
+  };
+
   render() {
     const { items } = this.props;
-    const elements = items.map(({ id, text, link }) => (
+    const { activeIndex } = this.state;
+    const { handleClick } = this;
+
+    const elements = items.map(({ id, text, link }, index) => (
       <li key={id}>
-        <a className={styles.link} href={link}>
+        <a
+          onClick={() => handleClick(index)}
+          className={
+            activeIndex === index
+              ? `${styles.link} ${styles.active}`
+              : styles.link
+          }
+          href={link}
+        >
           {text}
         </a>
       </li>
