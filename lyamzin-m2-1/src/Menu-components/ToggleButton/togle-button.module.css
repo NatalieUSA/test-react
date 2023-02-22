@@ -14,10 +14,25 @@
   font-size: 12px;
   box-shadow: 1px 1px 1px deeppink;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn {
+    animation: btn-spin infinite 100s linear;
+  }
+}
+
+@keyframes btn-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .btn:hover {
-  font-size: 15px;
+  font-size: 13px;
   color: #f8f6f6;
-  padding: 73px 50px;
+  padding: 73px 50.5px;
 }
 .btn.active {
   background-color: deeppink;
