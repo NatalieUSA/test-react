@@ -1,9 +1,10 @@
 import styles from "./button.module.css";
 
-const Button = ({ onClick, text, type }) => {
+const Button = ({ children, onClick, text, type }) => {
+  console.log(children);
   return (
     <button onClick={onClick} className={styles.btn} type={type}>
-      {text}
+      {children}
     </button>
   );
 };

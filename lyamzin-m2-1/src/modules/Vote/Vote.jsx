@@ -3,6 +3,7 @@ import styles from "./vote.module.css";
 //import cssBtn from "../../Menu-components/shared/MainMenu/main-menu.module.css";
 import VoteVariants from "./VoteVariants/VoteVariants";
 import VoteResults from "./VoteResults/VoteResults";
+import VoteBlock from "./VoteBlock/VoteBlock";
 
 class Vote extends Component {
   state = {
@@ -19,6 +20,7 @@ class Vote extends Component {
   }
 
   calcPercent(propName) {
+    console.log(propName);
     const total = this.calcTotal();
     console.log(total);
     if (!total) {
@@ -45,7 +47,6 @@ class Vote extends Component {
   leaveVote = (name) => {
     // console.log(this);
     this.setState((prevState) => {
-      //   console.log(prevState);
       return { [name]: prevState[name] + 1 };
     });
   };
@@ -61,12 +62,17 @@ class Vote extends Component {
       <div className={styles.vote}>
         <h3 className={styles.title}>your gender</h3>
         <div className={styles.wrapper}>
-          <VoteVariants leaveVote={this.leaveVote} />
-          <VoteResults
-            total={total}
-            femalePercent={femalePercent}
-            malePercent={malePercent}
-          />
+          <VoteBlock title="vote results">
+            <VoteVariants leaveVote={this.leaveVote} />
+          </VoteBlock>
+
+          <VoteBlock title="vote results">
+            <VoteResults
+              total={total}
+              femalePercent={femalePercent}
+              malePercent={malePercent}
+            />
+          </VoteBlock>
         </div>
       </div>
     );
