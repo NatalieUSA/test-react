@@ -1,4 +1,6 @@
+import PropTypes from "prop-types";
 import Button from "../../../Menu-components/shared/components/Button/Button";
+
 const VoteVariants = ({ leaveVote }) => {
   return (
     <>
@@ -13,3 +15,6 @@ const VoteVariants = ({ leaveVote }) => {
 };
 
 export default VoteVariants;
+VoteVariants.protoTypes = {
+  leaveVote: PropTypes.func.isRequired,
+};

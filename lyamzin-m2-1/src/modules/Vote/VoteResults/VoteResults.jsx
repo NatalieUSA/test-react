@@ -1,4 +1,6 @@
-import styles from "../../Vote/vote.module.css";
+import PropTypes from "prop-types";
+
+//import styles from "../../Vote/vote.module.css";
 
 const VoteResults = ({ total, femalePercent, malePercent }) => {
   return (
@@ -10,3 +12,9 @@ const VoteResults = ({ total, femalePercent, malePercent }) => {
   );
 };
 export default VoteResults;
+
+VoteResults.propTypes = {
+  total: PropTypes.func.isRequired,
+  femalePercent: PropTypes.func.isRequired,
+  malePercent: PropTypes.func.isRequired,
+};

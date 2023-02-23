@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import styles from "./vote-block.module.css";
 
 const VoteBlock = ({ children, title }) => {
@@ -9,3 +11,8 @@ const VoteBlock = ({ children, title }) => {
   );
 };
 export default VoteBlock;
+
+VoteBlock.protoTypes = {
+  children: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired,
+};
